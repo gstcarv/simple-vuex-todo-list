@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheNavbar />
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <todos-table />
+        </div>
+        <div class="col-md-6">
+          <new-todo-form />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import TodosTable from './components/TodosTable'
+import TheNavbar from './components/TheNavbar'
+import NewTodoForm from './components/NewTodoForm'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TheNavbar,
+    TodosTable,
+    NewTodoForm
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
+
 </style>
